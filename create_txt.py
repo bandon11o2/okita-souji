@@ -18,7 +18,7 @@ content = ''
 for img_path in img_paths:
 	content += img_path + '\n'
 content = content[:-1]
-with open(new_dir+'/'+'train.txt','w') as fw:
+with open(new_dir+'/'+datasetname+'_train.txt','w') as fw:
 	fw.write(content)
 
 test_dir = dir_main+'/images/test'
@@ -28,13 +28,13 @@ content = ''
 for img_path in img_paths:
 	content += img_path + '\n'
 content = content[:-1]
-with open(new_dir+'/'+'test.txt','w') as fw:
+with open(new_dir+'/'+datasetname+'_test.txt','w') as fw:
 	fw.write(content)
 
 content = 'car' +'\n' + 'bus' +'\n' + 'truck'+'\n' + 'bike'+'\n'+ 'motor'+'\n'+'person'+'\n'+'rider'
 with open(new_dir+'/'+datasetname+'.name','w') as fw:
 	fw.write(content)
-content = 'classes=7' + '\n' + 'train='+new_dir+'/'+'train.txt'+'\n'+'valid='+new_dir+'/'+'test.txt' + '\n' + 'names='+new_dir+'/'+datasetname+'.name'
+content = 'classes=7' + '\n' + 'train='+new_dir+'/'+datasetname+'_train.txt'+'\n'+'valid='+new_dir+'/'+datasetname+'_test.txt' + '\n' + 'names='+new_dir+'/'+datasetname+'.name'
 with open(new_dir+'/'+datasetname+'.data','w') as fw:
 	fw.write(content)
 
