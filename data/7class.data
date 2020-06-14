@@ -1,0 +1,4 @@
+classes=7
+train=./data/7class_train.txt
+valid=./data/7class_test.txt
+names=./data/7class.name

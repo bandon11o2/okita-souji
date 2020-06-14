@@ -1,4 +1,0 @@
-classes=7
-train=./dataset/data/7class_train.txt
-valid=./dataset/data/7class_test.txt
-names=./dataset/data/7class.name
